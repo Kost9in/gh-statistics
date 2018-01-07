@@ -6,7 +6,8 @@
   "scripts": {
     "dev-server": "NODE_ENV=dev node_modules/.bin/nodemon server/index.js",
     "dev-client": "webpack-dev-server",
-    "start": "NODE_ENV=prod node_modules/.bin/webpack && node server/index.js"
+    "start": "NODE_ENV=prod node server/index.js",
+    "postinstall": "webpack"
   },
   "author": "",
   "license": "ISC",
