@@ -1,4 +1,5 @@
 var path = require('path');
+var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 
@@ -25,7 +26,10 @@ module.exports = {
 		}),
 		new CopyWebpackPlugin([
 			{ from: 'src/assets/img', to: 'img' }
-		])
+		]),
+		new webpack.EnvironmentPlugin({
+			NODE_ENV: process.env.NODE_ENV || 'prod'
+		})
 	],
 	module: {
 		loaders: [{

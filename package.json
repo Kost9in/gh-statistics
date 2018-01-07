@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev-server": "NODE_ENV=dev node_modules/.bin/nodemon server/index.js",
-    "dev-client": "webpack-dev-server",
-    "start": "NODE_ENV=prod node server/index.js",
+    "dev-client": "NODE_ENV=dev webpack-dev-server",
+    "build": "webpack && node server/index.js",
+    "start": "node server/index.js",
     "postinstall": "webpack"
   },
   "author": "",
